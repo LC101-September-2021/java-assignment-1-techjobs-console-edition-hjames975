@@ -76,7 +76,7 @@ public class JobData {
 
             String aValue = row.get(column);
 
-            if (aValue.contains(value)) {
+            if (aValue.toLowerCase().contains(value.toLowerCase())) {
                 jobs.add(row);
             }
         }
@@ -99,12 +99,14 @@ public class JobData {
 
         for (HashMap<String, String> row : allJobs) {
 
+            //for (Map.Entry<String, String> r : row.entrySet()) {
             for (String key : row.keySet()) {
                 //jobInfo += (jobColumn.getKey() + ": " + jobColumn.getValue() + "\n");
-
                 String aValue = row.get(key);
 
-                if (aValue.toLowerCase().contains(value.toLowerCase())) {
+                //if (r.getValue().toLowerCase().contains(value.toLowerCase())) {
+                    //jobs.add(row);
+               if (aValue.toLowerCase().contains(value.toLowerCase())) {
                     jobs.add(row);
                     break;
                 }
@@ -113,7 +115,6 @@ public class JobData {
         }
 
         // TODO - implement this method
-    //for loop, comarison if this entry matches then put in new array then return,,,, like satelites assignment hash..row arraylist hashmap string string
 
         return jobs;
     }
