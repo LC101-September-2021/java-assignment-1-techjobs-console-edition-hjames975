@@ -99,17 +99,12 @@ public class JobData {
 
         for (HashMap<String, String> row : allJobs) {
 
-            //for (Map.Entry<String, String> r : row.entrySet()) {
             for (String key : row.keySet()) {
-                //jobInfo += (jobColumn.getKey() + ": " + jobColumn.getValue() + "\n");
                 String aValue = row.get(key);
-
-                //if (r.getValue().toLowerCase().contains(value.toLowerCase())) {
-                    //jobs.add(row);
-               if (aValue.toLowerCase().contains(value.toLowerCase())) {
-                    jobs.add(row);
-                    break;
-                }
+                   if (aValue.toLowerCase().contains(value.toLowerCase())) {
+                        jobs.add(row);
+                        break;
+                    }
             }
 
         }
