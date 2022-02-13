@@ -127,10 +127,10 @@ public class TechJobs {
 
         for (HashMap<String, String> job :someJobs) {
             //System.out.println(job);
-            String jobInfo = "*****\n";
+            String jobInfo = "\n*****\n";
 
             for (Map.Entry<String, String> jobColumn : job.entrySet()) {
-                jobInfo += (jobColumn.getKey() + ": " + jobColumn.getValue() + "\n");
+                jobInfo += (jobColumn.getKey() + ": " + jobColumn.getValue() );
             }
 
             jobInfo += "*****";
